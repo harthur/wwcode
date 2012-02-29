@@ -12,7 +12,7 @@ function searchTwitter(term, callback) {
   var url = "http://search.twitter.com/search.json?callback=?";
   var params = {
     q: term,
-    rpp: 5,
+    rpp: 7,
     result_type: "recent"
   };
 

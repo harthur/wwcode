@@ -1,13 +1,3 @@
-Handlebars.registerHelper('date', function(time) {
-   var date = new Date(time);
-   return (date.getMonth() + 1) + "/" + date.getDate();
-});
-
-Handlebars.registerHelper('timeago', function(time) {
-   time = time.replace(/.*, /, "");
-   return $.timeago(time);
-});
-
 $(document).ready(function() {
   var eventTemplate = Handlebars.compile($("#event-template").html());
   var tweetTemplate = Handlebars.compile($("#tweet-template").html());
@@ -34,8 +24,21 @@ $(document).ready(function() {
     var tweets = data.results;
 
     tweets.forEach(function(tweet) {
-      tweetsHTML += tweetTemplate(tweet);
+      if (tweet.text.indexOf("RT") == -1) {
+        tweetsHTML += tweetTemplate(tweet);
+      }
     });
     $("#tweets").html(tweetsHTML);
   });
 })
+
+Handlebars.registerHelper('date', function(time) {
+   var date = new Date(time);
+   return (date.getMonth() + 1) + "/" + date.getDate();
+});
+
+Handlebars.registerHelper('timeago', function(time) {
+   time = time.replace(/.*, /, "");
+   return $.timeago(time);
+});
+

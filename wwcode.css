@@ -7,7 +7,7 @@ body {
   margin-top: 20px;
   padding-bottom: 20px;
   color: hsl(0, 0%, 20%);
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 #title-image {
@@ -81,6 +81,7 @@ body {
 
 .tweet-body {
   font-size: 0.9em;
+  padding-bottom: 10px;
 }
 
 .tweet-time {
