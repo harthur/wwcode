@@ -1,0 +1,61 @@
+<html>
+<head>
+  <link rel="stylesheet" href="normalize.css"/>
+  <link rel="stylesheet" href="wwcode.css"/>
+
+  <script src="jquery.js"></script>
+  <script src="jquery.timeago.js"></script>
+  <script src="handlebars.js"></script>
+  <script src="wwcode.js"></script>
+  <script src="apis.js"></script>
+
+  <script id="event-template" type="text/html">
+    <a href="{{event_url}}" class="event {{status}}">
+      <div class="event-date">
+        {{date time}}
+      </div>
+      <div class="event-name">
+        {{name}}
+      </div>
+    </a>
+  </script>
+
+  <script id="tweet-template" type="text/html">
+    <div class="tweet">
+      <img class="tweet-image" src="{{profile_image_url}}">
+      </img>
+      <div class="tweet-info">
+        <div class="tweet-title">
+          <a href="http://twitter.com/{{from_user}}" class="tweet-link">
+            <span class="tweet-name">
+              {{from_user_name}}
+            </span>
+            <span class="tweet-username">
+              @{{from_user}}
+            </span>
+          </a>
+          <span class="tweet-time">
+            {{timeago created_at}}
+          </span>
+        </div>
+        <div class="tweet-body">
+          {{text}}
+        </div>
+      </div>
+    </div>
+  </script>
+
+</head>
+<body>
+  <img id="title-image" src="wwcode.png"></img>
+  <div id="title">
+    Women Who Code SF
+  </div>
+    <div id="content">
+      <section id="events">
+      </section>
+      <section id="tweets">
+      </section>
+    </div>
+</body>
+</html>
