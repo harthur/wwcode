@@ -22,13 +22,14 @@ $(document).ready(function() {
       if (name.indexOf("python") == -1
           && name.indexOf("ruby") == -1
           && name.indexOf("rails") == -1
-          && name.indexOf("taking") == -1) {
-        eventsHTML += (eventTemplate(event));                
+          && name.indexOf("javascript") == -1
+          && name.indexOf("study") == -1) {
+        eventsHTML += (eventTemplate(event));
       }
     })
     $("#events").html(eventsHTML);
   });
-  
+
   searchTwitter('#wwcode', function(data) {
     var tweetsHTML = "";
     var tweets = data.results;
