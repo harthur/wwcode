@@ -1,0 +1,82 @@
+body {
+  font-family: Georgia, sans-serif; }
+
+#title {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  color: #ff0066;
+  font-size: 1.6em; }
+
+#title-image {
+  display: block;
+  margin: auto; }
+
+#content {
+  width: 700px;
+  margin: auto;
+  overflow: auto; }
+
+#events {
+  width: 400px;
+  float: left; }
+
+#tweets {
+  width: 360px;
+  float: right; }
+
+.upcoming, .upcoming:visited {
+  color: black; }
+
+.past, .past:visited {
+  color: #4d4d4d; }
+
+.event {
+  display: block;
+  margin-top: 0.4em;
+  width: 100%;
+  overflow: auto;
+  text-decoration: none; }
+
+.event:hover {
+  text-decoration: underline; }
+
+.event-date {
+  float: left;
+  width: 20%; }
+
+.event-name {
+  float: right;
+  width: 80%; }
+
+.tweet {
+  margin-bottom: 0.8em;
+  font-size: 14px; }
+
+.tweet-title {
+  font-family: Arial; }
+
+.tweet-link {
+  color: #c20ac2;
+  text-decoration: none; }
+
+.tweet-username {
+  font-size: 0.84em; }
+
+.tweet-body {
+  font-size: 0.9em;
+  padding-bottom: 10px; }
+
+.tweet-time {
+  color: #666666;
+  font-size: 0.8em;
+  float: right; }
+
+.tweet-image {
+  float: left;
+  padding-right: 10px; }
+
+.tweet-info {
+  padding-left: 10px; }
+
+/*# sourceMappingURL=index.css.map */
