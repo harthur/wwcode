@@ -18,18 +18,13 @@ body {
   overflow: auto; }
 
 #events {
-  width: 400px;
-  float: left; }
-
-#tweets {
-  width: 360px;
-  float: right; }
+  width: 400px;}
 
 .upcoming, .upcoming:visited {
   color: black; }
 
 .past, .past:visited {
-  color: #4d4d4d; }
+  color: #555; }
 
 .event {
   display: block;
@@ -78,5 +73,9 @@ body {
 
 .tweet-info {
   padding-left: 10px; }
+
+@media (max-width: 780px) {
+  #events {
+    float: none; } }
 
 /*# sourceMappingURL=index.css.map */

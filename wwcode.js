@@ -1,6 +1,5 @@
 $(document).ready(function() {
   var eventTemplate = Handlebars.compile($("#event-template").html());
-  var tweetTemplate = Handlebars.compile($("#tweet-template").html());
 
   getMeetupStuff('events', { status: "upcoming,past" }, function(data) {
     var eventsHTML = "";
@@ -19,19 +18,18 @@ $(document).ready(function() {
     })
     $("#events").html(eventsHTML);
   });
-
-  searchTwitter('#wwcode', function(data) {
-    var tweetsHTML = "";
-    var tweets = data.results;
-
-    tweets.forEach(function(tweet) {
-      if (tweet.text.indexOf("RT") == -1) {
-        tweetsHTML += tweetTemplate(tweet);
-      }
-    });
-    $("#tweets").html(tweetsHTML);
-  });
 })
+
+function getMeetupStuff(method, params, callback) {
+  var url = "http://api.meetup.com/2/" + method + "/?callback=?";
+  params = $.extend({
+    key: "29363e123f3a52532a7b306b95b4d",
+    group_urlname: "Women-Who-Code-SF",
+    time: '-1m,1m'
+  }, params);
+
+  $.getJSON(url, params, callback);
+}
 
 Handlebars.registerHelper('date', function(time) {
    var date = new Date(time);
